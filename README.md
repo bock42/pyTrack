@@ -31,3 +31,6 @@ cd ./Install-OpenCV/Ubuntu
 chmod +x ./* 
 ./opencv_latest.sh
 ```
+
+### Example of raw image
+https://cloud.githubusercontent.com/assets/6589737/19627621/ccdd9be8-9918-11e6-977d-61eb988845a1.jpeg
