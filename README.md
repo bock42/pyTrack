@@ -34,3 +34,6 @@ chmod +x ./*
 
 ### Example of raw image
 ![alt tag](https://cloud.githubusercontent.com/assets/6589737/19627621/ccdd9be8-9918-11e6-977d-61eb988845a1.jpeg)
+
+### Example of tracked image
+![alt_tag](https://cloud.githubusercontent.com/assets/6589737/19627648/8e76042a-9919-11e6-8448-a9421cacb777.jpeg)
