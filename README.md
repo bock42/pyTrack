@@ -42,3 +42,17 @@ The main function in this toolbox is `detectCirclesMovie.py`, which will open a 
 
 ### Example of raw and simultaneously tracked image
 ![alt_tag](https://cloud.githubusercontent.com/assets/6589737/19627648/8e76042a-9919-11e6-8448-a9421cacb777.jpeg)
+
+### Example output file
+```
+frame xP yP rP xG yG rG 
+1 416 258 55 408 254 9 
+2 416 258 55 408 254 9 
+3 416 258 55 408 254 9 
+4 394 256 53 396 252 9 
+5 394 254 51 396 252 9 
+6 398 256 52 394 254 9 
+7 394 260 53 396 252 9 
+8 400 258 48 396 254 9 
+9 400 258 48 396 254 9 ```
+
