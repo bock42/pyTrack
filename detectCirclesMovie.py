@@ -12,19 +12,18 @@ p2P = 35
 p2G = 10
 maxp2P = 45
 
-# load the eye tracking video
-cap = cv2.VideoCapture('/home/abock/videos/eyeMovie.mov')
+# ask user for inputs
+videoFile = raw_input('Video file: ')
+outDir = raw_input('Output directory: ')
+outFile = raw_input('Output text file name: ')
+if not os.path.exists(outDir):
+	os.makedirs(outDir)
 
-# save out the frames
-frameDir = '/home/abock/videos/Trackframes'
-if not os.path.exists(frameDir):
-	os.makedirs(frameDir)
+# load the eye tracking video
+cap = cv2.VideoCapture(videoFile)
 
 # save the output values
-valDir = '/home/abock/videos/Trackframes'
-valFile = os.path.join(valDir,"outputValues.txt")
-if not os.path.exists(valDir):
-	os.makedirs(valDir)
+valFile = os.path.join(outDir,outFile)
 with open(valFile,'w') as f:
 	f.write(' '.join(["frame","xP","yP","rP","xG","yG","rG","\n"]))
 
@@ -82,7 +81,7 @@ while(cap.isOpened()):
 
 	# save the frames
 	ct = ct + 1
-	outFrame = os.path.join(frameDir, "frame" + str(ct) + ".jpeg")
+	outFrame = os.path.join(outDir, "frame" + str(ct) + ".jpeg")
 	cv2.imwrite(outFrame,numpy.hstack([frame, output]))
 	#cv2.imwrite(outFrame,output)	
 
