@@ -16,9 +16,17 @@ maxp2P = 45
 cap = cv2.VideoCapture('/home/abock/videos/eyeMovie.mov')
 
 # save out the frames
-outDir = '/home/abock/videos/Trackframes'
-if not os.path.exists(outDir):
-    os.makedirs(outDir)
+frameDir = '/home/abock/videos/Trackframes'
+if not os.path.exists(frameDir):
+	os.makedirs(frameDir)
+
+# save the output values
+valDir = '/home/abock/videos/Trackframes'
+valFile = os.path.join(valDir,"outputValues.txt")
+if not os.path.exists(valDir):
+	os.makedirs(valDir)
+with open(valFile,'w') as f:
+	f.write(' '.join(["frame","xP","yP","rP","xG","yG","rG","\n"]))
 
 # loop through the frames
 ct = 0
@@ -72,10 +80,14 @@ while(cap.isOpened()):
 	cv2.imshow("output", numpy.hstack([frame, output]))
 	#cv2.imshow('output',output)
 
-	#Saving filtered image to new file
+	# save the frames
 	ct = ct + 1
-	outFrame = os.path.join(outDir, "frame" + str(ct) + ".jpeg")
-	cv2.imwrite(outFrame,gray)
+	outFrame = os.path.join(frameDir, "frame" + str(ct) + ".jpeg")
+	cv2.imwrite(outFrame,numpy.hstack([frame, output]))
+	#cv2.imwrite(outFrame,output)	
+
+	with open(valFile,'a') as f:
+        	f.write(' '.join([str(ct),str(xP),str(yP),str(rP),str(xG),str(yG),str(rG),"\n"]))
 
 	# quit movie if "q" is pressed
     	if cv2.waitKey(33) & 0xFF == ord('q'):
