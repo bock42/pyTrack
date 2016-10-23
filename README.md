@@ -1,6 +1,9 @@
 # pyTrack
 Toolbox for eye tracking using Python
 
+### Example of raw and simultaneously tracked image
+![alt_tag](https://cloud.githubusercontent.com/assets/6589737/19627648/8e76042a-9919-11e6-8448-a9421cacb777.jpeg)
+
 ### Requirements
 numpy
 
@@ -32,19 +35,19 @@ chmod +x ./*
 ./opencv_latest.sh
 ```
 ### Sample movie file
+Download the file below to a local folder
 https://drive.google.com/file/d/0B0H_0f12gCZvQ3M1Z1pxclZpMTA/view?usp=sharing
 
 ### Description of output
-The main function in this toolbox is `detectCirclesMovie.py`, which will open a movie file containing raw images of a human eye. The function will identify, track, and display the pupil using the Hough transform. The script will also identify, track, and display the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye. The frame, x, y, and radius values for the pupil and glint are output as columns within a text file.
+The main function in this toolbox is `detectCirclesMovie.py`, which will open a movie file containing raw images of a human eye. The function will identify, track, and display the pupil using the Hough transform. The script will also identify, track, and display the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye. The frames are saved as images, and the x, y, and radius values for the pupil and glint are output as columns within a text file.
+
+The script will ask the user for the path to the input movie file, as well as the output directory and text file name.
 
 ### Example of raw image
 ![alt tag](https://cloud.githubusercontent.com/assets/6589737/19627621/ccdd9be8-9918-11e6-977d-61eb988845a1.jpeg)
 
 ## Example of tracked image
 ![alt tag](https://cloud.githubusercontent.com/assets/6589737/19627664/0b3cba1c-991a-11e6-9e3c-c3c1d96b0e72.jpeg)
-
-### Example of raw and simultaneously tracked image
-![alt_tag](https://cloud.githubusercontent.com/assets/6589737/19627648/8e76042a-9919-11e6-8448-a9421cacb777.jpeg)
 
 ### Example output file
 ```
