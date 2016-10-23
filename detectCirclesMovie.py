@@ -1,6 +1,7 @@
 import cv2
 import numpy
 import math
+import os
 
 # set defaults
 radP = [25,100]
@@ -14,7 +15,13 @@ maxp2P = 45
 # load the eye tracking video
 cap = cv2.VideoCapture('/home/abock/videos/eyeMovie.mov')
 
+# save out the frames
+outDir = '/home/abock/videos/Trackframes'
+if not os.path.exists(outDir):
+    os.makedirs(outDir)
+
 # loop through the frames
+ct = 0
 while(cap.isOpened()):
 	# get the frame, save output for later
     	ret, frame = cap.read()
@@ -64,6 +71,11 @@ while(cap.isOpened()):
 	# show the output image
 	cv2.imshow("output", numpy.hstack([frame, output]))
 	#cv2.imshow('output',output)
+
+	#Saving filtered image to new file
+	ct = ct + 1
+	outFrame = os.path.join(outDir, "frame" + str(ct) + ".jpeg")
+	cv2.imwrite(outFrame,gray)
 
 	# quit movie if "q" is pressed
     	if cv2.waitKey(33) & 0xFF == ord('q'):
