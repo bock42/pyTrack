@@ -37,10 +37,20 @@ Download the file below to a local folder
 
 https://drive.google.com/file/d/0B0H_0f12gCZvQ3M1Z1pxclZpMTA/view?usp=sharing
 
-### Description of output
-The main function in this toolbox is `detectCirclesMovie.py`, which will open a movie file containing raw images of a human eye. The function will identify, track, and display the pupil using the Hough transform. The script will also identify, track, and display the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye. The frames are saved as images, and the x, y, and radius values for the pupil and glint are output as columns within a text file.
+### Usage
+The main function in this toolbox is `trackPupil.py`, which will open a movie file containing raw images of a human eye. The function will identify, track, and display the pupil using the Hough transform. The script will also identify, track, and display the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye. The frames are saved as images, and the x, y, and radius values for the pupil and glint are output as columns within a text file.
 
 The script will ask the user for the path to the input movie file, as well as the output directory and text file name.
+
+For example:
+
+```
+$ python trackPupil.py
+Video file: /homa/abock/videos/eyeMovie.mov
+Output Directory: /home/abock/eyeTracking
+Output text file name: eyeTracking.txt
+```
+
 
 ### Example output file
 ```
