@@ -31,6 +31,8 @@ cd ./Install-OpenCV/Ubuntu
 chmod +x ./* 
 ./opencv_latest.sh
 ```
+### Description of output
+The main function in this toolbox is `detectCirclesMovie.py`, which will open a movie file containing raw images of a human eye. The function will identify and track the pupil using the Hough transform. The script will also identify and track the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye.
 
 ### Example of raw image
 ![alt tag](https://cloud.githubusercontent.com/assets/6589737/19627621/ccdd9be8-9918-11e6-977d-61eb988845a1.jpeg)
