@@ -14,8 +14,6 @@ the following was installed on Ubuntu 16.04.1 LTS
 
 OpenCV installation instructions 
 
-http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html#linux-installation
-
 ```
 # compiler
 sudo apt-get install build-essential
