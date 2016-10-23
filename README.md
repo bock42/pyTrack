@@ -31,6 +31,9 @@ cd ./Install-OpenCV/Ubuntu
 chmod +x ./* 
 ./opencv_latest.sh
 ```
+### Sample movie file
+https://drive.google.com/file/d/0B0H_0f12gCZvQ3M1Z1pxclZpMTA/view?usp=sharing
+
 ### Description of output
 The main function in this toolbox is `detectCirclesMovie.py`, which will open a movie file containing raw images of a human eye. The function will identify, track, and display the pupil using the Hough transform. The script will also identify, track, and display the glint (refelection from the infrared camera), which is useful for determining the gaze direction of the eye. The frame, x, y, and radius values for the pupil and glint are output as columns within a text file.
 
