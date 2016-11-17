@@ -36,8 +36,6 @@ chmod +x ./*
 ### Installation on Mac
 The following was installed on OSX 10.10.5 (Yosemite)
 
-OpenCV installation instructions 
-
 Install homebrew (http://brew.sh/) if not already installed
 
 ```
@@ -49,6 +47,7 @@ brew upgrade
 # Install OpenCV
 brew tap homebrew/science
 brew install opencv
+pip install numpy
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 ```
 Note: the last line can be added to e.g. `~.bash_profile`
