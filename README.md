@@ -10,7 +10,7 @@ numpy
 OpenCV
 
 ### Installation on Ubuntu 
-the following was installed on Ubuntu 16.04.1 LTS
+The following was installed on Ubuntu 16.04.1 LTS
 
 OpenCV installation instructions 
 
@@ -32,6 +32,28 @@ cd ./Install-OpenCV/Ubuntu
 chmod +x ./* 
 ./opencv_latest.sh
 ```
+
+### Installation on Mac
+The following was installed on OSX 10.10.5 (Yosemite)
+
+OpenCV installation instructions 
+
+Install homebrew (http://brew.sh/) if not already installed
+
+```
+# Homebrew maintenance
+brew doctor
+brew update
+brew upgrade
+
+# Install OpenCV
+brew tap homebrew/science
+brew install opencv
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+```
+Note: the last line can be added to e.g. `~.bash_profile`
+
+
 ### Sample movie file
 Download the file below to a local folder
 
