@@ -47,7 +47,11 @@ brew upgrade
 # Install OpenCV
 brew tap homebrew/science
 brew install opencv
+
+# Install numpy
 pip install numpy
+
+# Add site-packages to path
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 ```
 Note: the last line can be added to e.g. `~.bash_profile`
