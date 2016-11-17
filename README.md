@@ -12,8 +12,6 @@ OpenCV
 ### Installation on Ubuntu 
 The following was installed on Ubuntu 16.04.1 LTS
 
-OpenCV installation instructions 
-
 ```
 # compiler
 sudo apt-get install build-essential
