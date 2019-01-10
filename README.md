@@ -69,7 +69,7 @@ For example:
 
 ```
 $ python trackPupil.py
-Video file: /homa/abock/videos/eyeMovie.mov
+Video file: /home/abock/videos/eyeMovie.mov
 Output Directory: /home/abock/eyeTracking
 Output text file name: eyeTracking.txt
 ```
